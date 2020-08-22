@@ -37,3 +37,6 @@ yarn run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### CI
+[![Build Status](https://semaphoreci.com/api/v1/edimossilva/memory-app-rails-vue/branches/master/badge.svg)](https://semaphoreci.com/edimossilva/memory-app-rails-vue)
