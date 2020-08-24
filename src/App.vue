@@ -5,6 +5,7 @@
       <router-link to="/about">Review app</router-link>
     </div>
     <router-view />
+    <h1>Teste Bruno</h1>
   </div>
 </template>
 
