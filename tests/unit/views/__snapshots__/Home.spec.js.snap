@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home.vue Matchs Snapshot 1`] = `
+<div class="home">
+  <h1>Home</h1>
+  <btn-stub label="add" onclick="function () { [native code] }" class="home--add-button"></btn-stub>
+  <create-item-modal-stub></create-item-modal-stub>
+</div>
+`;
