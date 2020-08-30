@@ -9,30 +9,21 @@
 </template>
 
 <script>
-import Button from "@/components/Button.vue";
-import { mapActions, mapState } from "vuex";
+import Btn from "@/components/Btn.vue";
+import { mapActions } from "vuex";
 
 export default {
   name: "CreateItemModal",
-  components: { btn: Button },
+  components: { Btn },
   data() {
     return {
       item: { key: "", value: "" },
     };
   },
-  computed: {
-    ...mapState(["memoryItem"]),
-  },
   methods: {
     ...mapActions(["createItem"]),
     onCreateButtonClick() {
       this.createItem(this.item);
-    },
-    show() {
-      this.$modal.show("create-item-modal");
-    },
-    hide() {
-      this.$modal.hide("create-item-modal");
     },
   },
 };

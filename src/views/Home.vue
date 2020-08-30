@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import Button from "@/components/Button.vue";
+import Btn from "@/components/Btn.vue";
 import CreateItemModal from "@/modals/CreateItemModal.vue";
 export default {
   name: "Home",
-  components: { btn: Button, "create-item-modal": CreateItemModal },
+  components: { Btn, "create-item-modal": CreateItemModal },
   methods: {
     onClickAddButton() {
       this.$modal.show("create-item-modal");
