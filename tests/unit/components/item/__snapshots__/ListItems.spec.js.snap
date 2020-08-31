@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItems.vue Matchs Snapshot 1`] = `
+<div>
+  <h1>ListItems</h1>
+  <div>
+    key: mockKey1, value: mockValue1
+  </div>
+  <div>
+    key: mockKey2, value: mockValue2
+  </div>
+</div>
+`;

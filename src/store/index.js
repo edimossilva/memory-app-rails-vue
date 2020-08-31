@@ -5,19 +5,19 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    item: {},
+    items: [],
   },
   mutations: {
-    mutate(state, payload) {
-      state[payload.property] = payload.value;
+    addItem(state, item) {
+      state.items.push(item);
     },
+    // mutate(state, payload) {
+    //   state[payload.property] = payload.value;
+    // },
   },
   actions: {
-    createItem({ commit }, item) {
-      commit("mutate", {
-        property: "item",
-        value: item,
-      });
+    addItem({ commit }, item) {
+      commit("addItem", { ...item });
     },
   },
   modules: {},

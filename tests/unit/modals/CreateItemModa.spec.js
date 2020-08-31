@@ -6,7 +6,7 @@ import store from "../../../src/store/index";
 
 Vue.use(VueRouter);
 describe("CreateItemModal.vue", () => {
-  const spyUpdate = jest.spyOn(CreateItemModal.methods, "createItem");
+  const spyUpdate = jest.spyOn(CreateItemModal.methods, "addItem");
 
   it("Matchs Snapshot", () => {
     const wrapper = shallowMount(CreateItemModal, {
@@ -18,10 +18,14 @@ describe("CreateItemModal.vue", () => {
   });
   describe("methods", () => {
     describe("onCreateButtonClick()", () => {
+      const $modal = { hide: jest.fn() };
       const wrapper = shallowMount(CreateItemModal, {
         store,
         stubs: {
           modal: true,
+        },
+        mocks: {
+          $modal,
         },
       });
 

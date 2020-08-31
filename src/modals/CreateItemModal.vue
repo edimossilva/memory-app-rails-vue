@@ -1,10 +1,22 @@
 <template>
-  <modal name="create-item-modal">
+  <modal name="create-item-modal" class="create-item-modal-js">
     <label> Key: </label>
-    <input v-model="item.key" type="text" />
+    <input
+      v-model="item.key"
+      type="text"
+      class="create-item-modal--input-key-js"
+    />
     <label> Value: </label>
-    <input v-model="item.value" type="text" />
-    <btn label="create" :onClick="onCreateButtonClick"></btn>
+    <input
+      v-model="item.value"
+      type="text"
+      class="create-item-modal--input-value-js"
+    />
+    <btn
+      label="create"
+      :onClick="onCreateButtonClick"
+      class="create-item-modal--button-create-js"
+    ></btn>
   </modal>
 </template>
 
@@ -21,9 +33,10 @@ export default {
     };
   },
   methods: {
-    ...mapActions(["createItem"]),
+    ...mapActions(["addItem"]),
     onCreateButtonClick() {
-      this.createItem(this.item);
+      this.addItem(this.item);
+      this.$modal.hide("create-item-modal");
     },
   },
 };
