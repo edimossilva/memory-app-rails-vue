@@ -1,5 +1,5 @@
 <template>
-  <button @click="onClick">{{ label }}</button>
+  <button @click="onClick" :dataId="dataId">{{ label }}</button>
 </template>
 
 <script>
@@ -16,6 +16,8 @@ export default {
       required: false,
       default: () => {},
     },
+
+    dataId: String,
   },
 };
 </script>

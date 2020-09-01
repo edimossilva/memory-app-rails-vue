@@ -2,14 +2,14 @@
   <div>
     <h1>ListItems</h1>
     <div v-for="item in items" :key="item.key">
-      key: {{ item.key }}, value: {{ item.value }}
+      <show-item :item="item"></show-item>
     </div>
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
-
+import ShowItem from "@/components/item/ShowItem.vue";
 export default {
   name: "ListItems",
   data() {
@@ -17,6 +17,7 @@ export default {
       item: { key: "", value: "" },
     };
   },
+  components: { ShowItem },
   computed: {
     ...mapState(["items"]),
   },

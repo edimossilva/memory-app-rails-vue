@@ -37,6 +37,7 @@ export default {
     onCreateButtonClick() {
       this.addItem(this.item);
       this.$modal.hide("create-item-modal");
+      this.item = {};
     },
   },
 };
