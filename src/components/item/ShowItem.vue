@@ -1,7 +1,9 @@
 <template>
   <div>
     <h1>Show item</h1>
-    key: {{ item.key }}, value: {{ item.value }}
+    <div class="show-item__label-js">
+      key: {{ item.key }}, value: {{ item.value }}
+    </div>
     <btn
       :dataId="item.key"
       label="remove"

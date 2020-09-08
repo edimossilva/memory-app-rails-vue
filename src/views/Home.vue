@@ -1,7 +1,11 @@
 <template>
   <div class="home">
     <h1>Home</h1>
-    <btn label="add" :onClick="onClickAddButton"></btn>
+    <btn
+      label="add"
+      :onClick="onClickAddButton"
+      dataId="home__add-item-button-js"
+    ></btn>
     <create-item-modal></create-item-modal>
     <list-items></list-items>
   </div>
