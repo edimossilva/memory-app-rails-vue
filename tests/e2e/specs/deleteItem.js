@@ -16,7 +16,7 @@ describe("Delete item", () => {
 
       describe("When click delete", () => {
         beforeEach(() => {
-          cy.get(`[dataId=${key1}]`).click();
+          cy.get(`.show-item---button-remove-js[dataId=${key1}]`).click();
         });
 
         it("should not display item", () => {

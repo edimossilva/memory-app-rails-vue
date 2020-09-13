@@ -10,6 +10,12 @@
       :onClick="onRemoveButtonClick"
       class="show-item---button-remove-js"
     ></btn>
+    <btn
+      :dataId="item.key"
+      label="copy"
+      :onClick="onCopyButtonClick"
+      class="show-item---copy-js"
+    ></btn>
   </div>
 </template>
 
@@ -28,6 +34,11 @@ export default {
 
     onRemoveButtonClick() {
       this.removeItem(this.item);
+    },
+    onCopyButtonClick() {
+      this.$copyText(this.item.value).then(() => {
+        alert("Copied");
+      });
     },
   },
 };

@@ -20,7 +20,7 @@ describe("ListItems.vue", () => {
   });
 
   describe("methods", () => {
-    describe("Name of the group", () => {
+    describe("onRemoveButtonClick()", () => {
       const wrapper = shallowMount(ShowItem, {
         store,
         propsData: { item },
@@ -32,6 +32,29 @@ describe("ListItems.vue", () => {
 
       it("should call push to dashboard", () => {
         expect(spyRemoveItem).toHaveBeenCalledWith(item);
+      });
+    });
+
+    // const wrapper = shallowMount(CreateItemModal, {
+    //   store,
+    //   stubs: {
+    //     modal: true,
+    //   },
+    //   mocks: {
+    //     $modal,
+    //   },
+    // });
+
+    const $copyText = () => {};
+    describe("onCopyButtonClick()", () => {
+      const wrapper = shallowMount(ShowItem, {
+        store,
+        propsData: { item },
+        mocks: { $copyText },
+      });
+
+      beforeEach(() => {
+        wrapper.vm.onCopyButtonClick();
       });
     });
   });
