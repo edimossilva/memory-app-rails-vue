@@ -7,5 +7,6 @@ exports[`ListItems.vue Matchs Snapshot 1`] = `
     key: mockKey1, value: mockValue1
   </div>
   <btn-stub label="remove" onclick="function () { [native code] }" dataid="mockKey1" class="show-item---button-remove-js"></btn-stub>
+  <btn-stub label="copy" onclick="function () { [native code] }" dataid="mockKey1" class="show-item---button-copy-js"></btn-stub>
 </div>
 `;
