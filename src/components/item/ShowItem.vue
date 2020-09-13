@@ -14,7 +14,7 @@
       :dataId="item.key"
       label="copy"
       :onClick="onCopyButtonClick"
-      class="show-item---copy-js"
+      class="show-item---button-copy-js"
     ></btn>
   </div>
 </template>
